@@ -2,6 +2,7 @@ package com.thewizecompany.billnova.security;
 
 
 import com.thewizecompany.billnova.entity.Users;
+import com.thewizecompany.billnova.repository.UserRepository;
 import lombok.NonNull;
 import org.jspecify.annotations.NullMarked;
 import org.springframework.transaction.annotation.Transactional;
@@ -21,14 +22,14 @@ import java.util.List;
 @RequiredArgsConstructor
 public class CustomUserDetailService implements UserDetailsService {
 
-    private final UsersRepository usersRepository;
+    private final UserRepository userRepository;
 
     @Override
     @NullMarked
     @Transactional(readOnly = true)
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException{
 
-        Users user = usersRepository.findByUsernameAndIsDeletedFalseAndIsActiveTrue(
+        Users user = userRepository.findByUsernameAndIsDeletedFalseAndIsActiveTrue(
                 username.toLowerCase().trim()
         )
                 .orElseThrow(() -> {

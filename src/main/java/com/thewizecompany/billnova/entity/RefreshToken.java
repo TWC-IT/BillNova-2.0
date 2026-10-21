@@ -64,6 +64,18 @@ public class RefreshToken extends BaseEntity implements Persistable<UUID> {
     @Builder.Default
     private Boolean isRevoked = false;
 
+    @Column(
+            name = "ip_address",
+            length = 45
+    )
+    private String ipAddress;
+
+    @Column(
+            name = "device_info",
+            length = 500
+    )
+    private String deviceInfo;
+
     @Override
     public boolean isNew() {return getUserId() == null;}
 

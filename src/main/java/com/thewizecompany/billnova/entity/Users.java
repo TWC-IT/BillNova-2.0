@@ -64,9 +64,6 @@ public class Users extends BaseEntity{
     @Column(name = "last_login_at")
     private Instant lastLoginAt;
 
-    @Column(name = "last_login_ip", length = 45)
-    private String lastLoginIp;
-
     public String getFullName(){
         return firstName + " " + lastName;
     }
@@ -85,10 +82,9 @@ public class Users extends BaseEntity{
         }
     }
 
-    public void recordSuccessfulLogin(String ipAddress){
+    public void recordSuccessfulLogin(){
         this.failedLoginAttempts = 0;
         this.accountLockedUntil = null;
         this.lastLoginAt = Instant.now();
-        this.lastLoginIp = ipAddress;
     }
 }
