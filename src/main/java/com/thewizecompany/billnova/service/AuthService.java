@@ -40,7 +40,7 @@ public class AuthService {
 
     @Transactional
     public AuthResult login(LoginRequest loginRequest, String iPAddress, String deviceInfo) {
-        String username = loginRequest.getUsername().toLowerCase().trim();
+        String username = loginRequest.getUsername().trim();
 
 
         try{

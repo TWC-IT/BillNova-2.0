@@ -74,7 +74,7 @@ public class RefreshToken extends BaseEntity implements Persistable<UUID> {
     private String deviceInfo;
 
     @Override
-    public boolean isNew() {return getUserId() == null;}
+    public boolean isNew() {return getId() == null;}
 
     public boolean isExpired() {return Instant.now().isAfter(expiry);}
 
