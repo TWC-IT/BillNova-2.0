@@ -18,21 +18,21 @@ import java.util.Optional;
 )
 public class JpaConfig {
 
-    @Bean
-    public AuditorAware<String> auditorProvider() {
-        return () -> {
-            Authentication authentication =  SecurityContextHolder.getContext().getAuthentication();
-
-            if (authentication == null || !authentication.isAuthenticated()) {
-                return Optional.empty();
-            }
-
-            String principal = authentication.getName();
-            if("anonymousUser".equals(principal)) {
-                return Optional.empty();
-            }
-
-            return Optional.of(principal);
-        };
-    }
+//    @Bean
+//    public AuditorAware<String> auditorProvider() {
+//        return () -> {
+//            Authentication authentication =  SecurityContextHolder.getContext().getAuthentication();
+//
+//            if (authentication == null || !authentication.isAuthenticated()) {
+//                return Optional.empty();
+//            }
+//
+//            String principal = authentication.getName();
+//            if("anonymousUser".equals(principal)) {
+//                return Optional.empty();
+//            }
+//
+//            return Optional.of(principal);
+//        };
+//    }
 }

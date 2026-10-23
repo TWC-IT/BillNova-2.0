@@ -1,0 +1,787 @@
+2026-10-22 18:23:59.631 [restartedMain] INFO  c.t.billnova.BillnovaApplication - Starting BillnovaApplication using Java 21.0.12.1 with PID 17204 (D:\Billnova-2.0\Billnova\target\classes started by TWC-22 in D:\Billnova-2.0\Billnova)
+2026-10-22 18:23:59.638 [restartedMain] INFO  c.t.billnova.BillnovaApplication - The following 1 profile is active: "dev"
+2026-10-22 18:23:59.796 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-22 18:23:59.796 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-22 18:24:01.497 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-22 18:24:01.596 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 76 ms. Found 2 JPA repository interfaces.
+2026-10-22 18:24:04.096 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-10-22 18:24:04.138 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-22 18:24:04.139 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-22 18:24:04.251 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 4454 ms
+2026-10-22 18:24:04.532 [restartedMain] ERROR o.s.b.t.s.DeferredServletContainerInitializers - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthFilter' defined in file [D:\Billnova-2.0\Billnova\target\classes\com\thewizecompany\billnova\security\JwtAuthFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtUtil' defined in file [D:\Billnova-2.0\Billnova\target\classes\com\thewizecompany\billnova\security\JwtUtil.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.thewizecompany.billnova.config.AppProperties' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-10-22 18:24:04.585 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-10-22 18:24:05.463 [restartedMain] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2026-10-22 18:24:05.493 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-22 18:24:05.549 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.thewizecompany.billnova.security.JwtUtil required a bean of type 'com.thewizecompany.billnova.config.AppProperties' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.thewizecompany.billnova.config.AppProperties' in your configuration.
+
+2026-10-22 18:25:28.853 [restartedMain] INFO  c.t.billnova.BillnovaApplication - Starting BillnovaApplication using Java 21.0.12.1 with PID 15720 (D:\Billnova-2.0\Billnova\target\classes started by TWC-22 in D:\Billnova-2.0\Billnova)
+2026-10-22 18:25:28.860 [restartedMain] INFO  c.t.billnova.BillnovaApplication - The following 1 profile is active: "dev"
+2026-10-22 18:25:29.048 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-22 18:25:29.048 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-22 18:25:30.525 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-22 18:25:30.625 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 82 ms. Found 2 JPA repository interfaces.
+2026-10-22 18:25:33.545 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-10-22 18:25:33.586 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-22 18:25:33.586 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-22 18:25:33.712 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 4662 ms
+2026-10-22 18:25:34.063 [restartedMain] ERROR o.s.b.t.s.DeferredServletContainerInitializers - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthFilter' defined in file [D:\Billnova-2.0\Billnova\target\classes\com\thewizecompany\billnova\security\JwtAuthFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtUtil' defined in file [D:\Billnova-2.0\Billnova\target\classes\com\thewizecompany\billnova\security\JwtUtil.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.thewizecompany.billnova.config.AppProperties' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-10-22 18:25:34.113 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-10-22 18:25:34.142 [restartedMain] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2026-10-22 18:25:34.164 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-22 18:25:34.208 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.thewizecompany.billnova.security.JwtUtil required a bean of type 'com.thewizecompany.billnova.config.AppProperties' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.thewizecompany.billnova.config.AppProperties' in your configuration.
+
+2026-10-22 18:30:06.631 [restartedMain] INFO  c.t.billnova.BillnovaApplication - Starting BillnovaApplication using Java 21.0.12.1 with PID 17100 (D:\Billnova-2.0\Billnova\target\classes started by TWC-22 in D:\Billnova-2.0\Billnova)
+2026-10-22 18:30:06.638 [restartedMain] INFO  c.t.billnova.BillnovaApplication - The following 1 profile is active: "dev"
+2026-10-22 18:30:06.774 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-22 18:30:06.775 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-22 18:30:08.258 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-22 18:30:08.346 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 73 ms. Found 2 JPA repository interfaces.
+2026-10-22 18:30:10.650 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-10-22 18:30:10.684 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-22 18:30:10.685 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-22 18:30:10.775 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 3996 ms
+2026-10-22 18:30:11.014 [restartedMain] ERROR o.s.b.t.s.DeferredServletContainerInitializers - Error starting Tomcat context. Exception: org.springframework.beans.factory.UnsatisfiedDependencyException. Message: Error creating bean with name 'jwtAuthFilter' defined in file [D:\Billnova-2.0\Billnova\target\classes\com\thewizecompany\billnova\security\JwtAuthFilter.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'jwtUtil' defined in file [D:\Billnova-2.0\Billnova\target\classes\com\thewizecompany\billnova\security\JwtUtil.class]: Unsatisfied dependency expressed through constructor parameter 0: No qualifying bean of type 'com.thewizecompany.billnova.config.AppProperties' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {}
+2026-10-22 18:30:11.065 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-10-22 18:30:11.092 [restartedMain] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.context.ApplicationContextException: Unable to start web server
+2026-10-22 18:30:11.107 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-22 18:30:11.136 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Parameter 0 of constructor in com.thewizecompany.billnova.security.JwtUtil required a bean of type 'com.thewizecompany.billnova.config.AppProperties' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.thewizecompany.billnova.config.AppProperties' in your configuration.
+
+2026-10-22 18:33:07.963 [restartedMain] INFO  c.t.billnova.BillnovaApplication - Starting BillnovaApplication using Java 21.0.12.1 with PID 9688 (D:\Billnova-2.0\Billnova\target\classes started by TWC-22 in D:\Billnova-2.0\Billnova)
+2026-10-22 18:33:07.968 [restartedMain] INFO  c.t.billnova.BillnovaApplication - The following 1 profile is active: "dev"
+2026-10-22 18:33:08.128 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-22 18:33:08.128 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-22 18:33:09.602 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-22 18:33:09.696 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 76 ms. Found 2 JPA repository interfaces.
+2026-10-22 18:33:12.069 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-10-22 18:33:12.107 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-22 18:33:12.107 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-22 18:33:12.226 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 4096 ms
+2026-10-22 18:33:13.185 [restartedMain] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-22 18:33:13.313 [restartedMain] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-22 18:33:14.224 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-22 18:33:14.285 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Starting...
+2026-10-22 18:33:14.651 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - BillnovaDevPool - Added connection org.postgresql.jdbc.PgConnection@6d42007a
+2026-10-22 18:33:14.653 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Start completed.
+2026-10-22 18:33:14.703 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-22 18:33:14.751 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/billnova]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.15
+	Default catalog/schema: billnova/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-22 18:33:16.544 [restartedMain] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-22 18:33:16.549 [restartedMain] INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 25)
+2026-10-22 18:33:16.646 [restartedMain] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema validation: missing table [auth_refresh_tokens]
+2026-10-22 18:33:16.647 [restartedMain] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema validation: missing table [auth_refresh_tokens]
+2026-10-22 18:33:16.649 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Shutdown initiated...
+2026-10-22 18:33:16.654 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Shutdown completed.
+2026-10-22 18:33:16.664 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-10-22 18:33:16.683 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-22 18:33:16.701 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema validation: missing table [auth_refresh_tokens]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1815)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.thewizecompany.billnova.BillnovaApplication.main(BillnovaApplication.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
+Caused by: jakarta.persistence.PersistenceException: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema validation: missing table [auth_refresh_tokens]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:448)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811)
+	... 18 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema validation: missing table [auth_refresh_tokens]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:128)
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:42)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:97)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:75)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:278)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:327)
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:458)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1452)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436)
+	... 22 common frames omitted
+2026-10-22 18:48:11.215 [restartedMain] INFO  c.t.billnova.BillnovaApplication - Starting BillnovaApplication using Java 21.0.12.1 with PID 12056 (D:\Billnova-2.0\Billnova\target\classes started by TWC-22 in D:\Billnova-2.0\Billnova)
+2026-10-22 18:48:11.220 [restartedMain] INFO  c.t.billnova.BillnovaApplication - The following 1 profile is active: "dev"
+2026-10-22 18:48:11.440 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-22 18:48:11.441 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-22 18:48:13.719 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-22 18:48:13.845 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 97 ms. Found 2 JPA repository interfaces.
+2026-10-22 18:48:17.462 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-10-22 18:48:17.509 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-22 18:48:17.510 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-22 18:48:17.622 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 6179 ms
+2026-10-22 18:48:18.510 [restartedMain] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-22 18:48:18.615 [restartedMain] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-22 18:48:19.547 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-22 18:48:19.598 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Starting...
+2026-10-22 18:48:19.915 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - BillnovaDevPool - Added connection org.postgresql.jdbc.PgConnection@41de1a02
+2026-10-22 18:48:19.918 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Start completed.
+2026-10-22 18:48:19.972 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-22 18:48:20.015 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/billnova]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.15
+	Default catalog/schema: billnova/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-22 18:48:21.549 [restartedMain] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-22 18:48:21.553 [restartedMain] INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 25)
+2026-10-22 18:48:21.616 [restartedMain] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema validation: missing table [auth_refresh_tokens]
+2026-10-22 18:48:21.617 [restartedMain] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema validation: missing table [auth_refresh_tokens]
+2026-10-22 18:48:21.619 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Shutdown initiated...
+2026-10-22 18:48:21.623 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Shutdown completed.
+2026-10-22 18:48:21.632 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-10-22 18:48:21.651 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-22 18:48:21.670 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema validation: missing table [auth_refresh_tokens]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1815)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.thewizecompany.billnova.BillnovaApplication.main(BillnovaApplication.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
+Caused by: jakarta.persistence.PersistenceException: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema validation: missing table [auth_refresh_tokens]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:448)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811)
+	... 18 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema validation: missing table [auth_refresh_tokens]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:128)
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:42)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:97)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:75)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:278)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:327)
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:458)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1452)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436)
+	... 22 common frames omitted
+2026-10-22 18:59:18.067 [restartedMain] INFO  c.t.billnova.BillnovaApplication - Starting BillnovaApplication using Java 21.0.12.1 with PID 7028 (D:\Billnova-2.0\Billnova\target\classes started by TWC-22 in D:\Billnova-2.0\Billnova)
+2026-10-22 18:59:18.076 [restartedMain] INFO  c.t.billnova.BillnovaApplication - The following 1 profile is active: "dev"
+2026-10-22 18:59:18.220 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-22 18:59:18.221 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-22 18:59:19.781 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-22 18:59:19.874 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 76 ms. Found 2 JPA repository interfaces.
+2026-10-22 18:59:22.284 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-10-22 18:59:22.317 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-22 18:59:22.318 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-22 18:59:22.409 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 4187 ms
+2026-10-22 18:59:23.270 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Starting...
+2026-10-22 18:59:23.584 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - BillnovaDevPool - Added connection org.postgresql.jdbc.PgConnection@2ccfc40d
+2026-10-22 18:59:23.586 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Start completed.
+2026-10-22 18:59:23.623 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/billnova (PostgreSQL 16.15)
+2026-10-22 18:59:23.751 [restartedMain] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "public"."flyway_schema_history" does not exist yet
+2026-10-22 18:59:23.758 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 3 migrations (execution time 00:00.037s)
+2026-10-22 18:59:23.859 [restartedMain] INFO  org.flywaydb.core.Flyway - All configured schemas are empty; a baseline marker will not be added to Flyway's schema history table. A baseline or migration script with a lower version than the baseline version may execute if available. Check the Schemas parameter if this is not intended. See https://help.red-gate.com/help/flyway-cli12/help_4.aspx?topic=baseline-on-migrate for more info
+2026-10-22 18:59:23.879 [restartedMain] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "public"."flyway_schema_history" ...
+2026-10-22 18:59:24.010 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": << Empty Schema >>
+2026-10-22 18:59:24.024 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "1 - init schema"
+2026-10-22 18:59:24.133 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "2 - users schema"
+2026-10-22 18:59:24.202 [restartedMain] ERROR o.f.core.internal.command.DbMigrate - Migration of schema "public" to version "2 - users schema" failed! Changes successfully rolled back.
+2026-10-22 18:59:24.217 [restartedMain] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Failed to execute script V2__users_schema.sql
+---------------------------------------------
+SQL State  : 42601
+Error Code : 0
+Message    : ERROR: syntax error at or near ")"
+  Position: 1049
+Location   : db/migration/V2__users_schema.sql (D:\Billnova-2.0\Billnova\target\classes\db\migration\V2__users_schema.sql)
+Line       : 2
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+2026-10-22 18:59:24.222 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Shutdown initiated...
+2026-10-22 18:59:24.228 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Shutdown completed.
+2026-10-22 18:59:24.243 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-10-22 18:59:24.280 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-22 18:59:24.309 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Failed to execute script V2__users_schema.sql
+---------------------------------------------
+SQL State  : 42601
+Error Code : 0
+Message    : ERROR: syntax error at or near ")"
+  Position: 1049
+Location   : db/migration/V2__users_schema.sql (D:\Billnova-2.0\Billnova\target\classes\db\migration\V2__users_schema.sql)
+Line       : 2
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.thewizecompany.billnova.BillnovaApplication.main(BillnovaApplication.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Failed to execute script V2__users_schema.sql
+---------------------------------------------
+SQL State  : 42601
+Error Code : 0
+Message    : ERROR: syntax error at or near ")"
+  Position: 1049
+Location   : db/migration/V2__users_schema.sql (D:\Billnova-2.0\Billnova\target\classes\db\migration\V2__users_schema.sql)
+Line       : 2
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1815)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309)
+	... 13 common frames omitted
+Caused by: org.flywaydb.core.internal.exception.FlywayMigrateException: Failed to execute script V2__users_schema.sql
+---------------------------------------------
+SQL State  : 42601
+Error Code : 0
+Message    : ERROR: syntax error at or near ")"
+  Position: 1049
+Location   : db/migration/V2__users_schema.sql (D:\Billnova-2.0\Billnova\target\classes\db\migration\V2__users_schema.sql)
+Line       : 2
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:399)
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$applyMigrations$1(DbMigrate.java:283)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:59)
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:282)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:255)
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$migrateAll$0(DbMigrate.java:153)
+	at org.flywaydb.database.postgresql.PostgreSQLAdvisoryLockTemplate.execute(PostgreSQLAdvisoryLockTemplate.java:77)
+	at org.flywaydb.database.postgresql.PostgreSQLAdvisoryLockTemplate.lambda$execute$0(PostgreSQLAdvisoryLockTemplate.java:60)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:59)
+	at org.flywaydb.database.postgresql.PostgreSQLAdvisoryLockTemplate.execute(PostgreSQLAdvisoryLockTemplate.java:60)
+	at org.flywaydb.database.postgresql.PostgreSQLConnection.lock(PostgreSQLConnection.java:105)
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:165)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:153)
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:104)
+	at org.flywaydb.core.Flyway.lambda$migrate$3(Flyway.java:231)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:236)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:120)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:181)
+	at org.springframework.boot.flyway.autoconfigure.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:67)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811)
+	... 20 common frames omitted
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: Failed to execute script V2__users_schema.sql
+---------------------------------------------
+SQL State  : 42601
+Error Code : 0
+Message    : ERROR: syntax error at or near ")"
+  Position: 1049
+Location   : db/migration/V2__users_schema.sql (D:\Billnova-2.0\Billnova\target\classes\db\migration\V2__users_schema.sql)
+Line       : 2
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:251)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:212)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:134)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:75)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.lambda$execute$0(SqlMigrationExecutor.java:66)
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:31)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:65)
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:391)
+	... 40 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near ")"
+  Position: 1049
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2993)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2656)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:446)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:533)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:449)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:371)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:356)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:332)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:327)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:229)
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:88)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:207)
+	... 46 common frames omitted
+2026-10-22 19:00:36.778 [restartedMain] INFO  c.t.billnova.BillnovaApplication - Starting BillnovaApplication using Java 21.0.12.1 with PID 15044 (D:\Billnova-2.0\Billnova\target\classes started by TWC-22 in D:\Billnova-2.0\Billnova)
+2026-10-22 19:00:36.783 [restartedMain] INFO  c.t.billnova.BillnovaApplication - The following 1 profile is active: "dev"
+2026-10-22 19:00:36.953 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-22 19:00:36.954 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-22 19:00:38.372 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-22 19:00:38.470 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 78 ms. Found 2 JPA repository interfaces.
+2026-10-22 19:00:41.027 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-10-22 19:00:41.057 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-22 19:00:41.057 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-22 19:00:41.153 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 4199 ms
+2026-10-22 19:00:42.141 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Starting...
+2026-10-22 19:00:42.498 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - BillnovaDevPool - Added connection org.postgresql.jdbc.PgConnection@75aa6857
+2026-10-22 19:00:42.500 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Start completed.
+2026-10-22 19:00:42.543 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/billnova (PostgreSQL 16.15)
+2026-10-22 19:00:42.735 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 3 migrations (execution time 00:00.095s)
+2026-10-22 19:00:42.786 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 1
+2026-10-22 19:00:42.830 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "2 - users schema"
+2026-10-22 19:00:42.871 [restartedMain] ERROR o.f.core.internal.command.DbMigrate - Migration of schema "public" to version "2 - users schema" failed! Changes successfully rolled back.
+2026-10-22 19:00:42.885 [restartedMain] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Failed to execute script V2__users_schema.sql
+---------------------------------------------
+SQL State  : 42601
+Error Code : 0
+Message    : ERROR: syntax error at or near ")"
+  Position: 1049
+Location   : db/migration/V2__users_schema.sql (D:\Billnova-2.0\Billnova\target\classes\db\migration\V2__users_schema.sql)
+Line       : 2
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+2026-10-22 19:00:42.887 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Shutdown initiated...
+2026-10-22 19:00:42.898 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Shutdown completed.
+2026-10-22 19:00:42.907 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-10-22 19:00:42.933 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-22 19:00:43.014 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Failed to execute script V2__users_schema.sql
+---------------------------------------------
+SQL State  : 42601
+Error Code : 0
+Message    : ERROR: syntax error at or near ")"
+  Position: 1049
+Location   : db/migration/V2__users_schema.sql (D:\Billnova-2.0\Billnova\target\classes\db\migration\V2__users_schema.sql)
+Line       : 2
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.thewizecompany.billnova.BillnovaApplication.main(BillnovaApplication.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Failed to execute script V2__users_schema.sql
+---------------------------------------------
+SQL State  : 42601
+Error Code : 0
+Message    : ERROR: syntax error at or near ")"
+  Position: 1049
+Location   : db/migration/V2__users_schema.sql (D:\Billnova-2.0\Billnova\target\classes\db\migration\V2__users_schema.sql)
+Line       : 2
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1815)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309)
+	... 13 common frames omitted
+Caused by: org.flywaydb.core.internal.exception.FlywayMigrateException: Failed to execute script V2__users_schema.sql
+---------------------------------------------
+SQL State  : 42601
+Error Code : 0
+Message    : ERROR: syntax error at or near ")"
+  Position: 1049
+Location   : db/migration/V2__users_schema.sql (D:\Billnova-2.0\Billnova\target\classes\db\migration\V2__users_schema.sql)
+Line       : 2
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:399)
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$applyMigrations$1(DbMigrate.java:283)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:59)
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:282)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:255)
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$migrateAll$0(DbMigrate.java:153)
+	at org.flywaydb.database.postgresql.PostgreSQLAdvisoryLockTemplate.execute(PostgreSQLAdvisoryLockTemplate.java:77)
+	at org.flywaydb.database.postgresql.PostgreSQLAdvisoryLockTemplate.lambda$execute$0(PostgreSQLAdvisoryLockTemplate.java:60)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:59)
+	at org.flywaydb.database.postgresql.PostgreSQLAdvisoryLockTemplate.execute(PostgreSQLAdvisoryLockTemplate.java:60)
+	at org.flywaydb.database.postgresql.PostgreSQLConnection.lock(PostgreSQLConnection.java:105)
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:165)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:153)
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:104)
+	at org.flywaydb.core.Flyway.lambda$migrate$3(Flyway.java:231)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:236)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:120)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:181)
+	at org.springframework.boot.flyway.autoconfigure.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:67)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811)
+	... 20 common frames omitted
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: Failed to execute script V2__users_schema.sql
+---------------------------------------------
+SQL State  : 42601
+Error Code : 0
+Message    : ERROR: syntax error at or near ")"
+  Position: 1049
+Location   : db/migration/V2__users_schema.sql (D:\Billnova-2.0\Billnova\target\classes\db\migration\V2__users_schema.sql)
+Line       : 2
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:251)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:212)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:134)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:75)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.lambda$execute$0(SqlMigrationExecutor.java:66)
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:31)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:65)
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:391)
+	... 40 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: syntax error at or near ")"
+  Position: 1049
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2993)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2656)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:446)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:533)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:449)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:371)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:356)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:332)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:327)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:229)
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:88)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:207)
+	... 46 common frames omitted
+2026-10-22 19:01:19.882 [restartedMain] INFO  c.t.billnova.BillnovaApplication - Starting BillnovaApplication using Java 21.0.12.1 with PID 15900 (D:\Billnova-2.0\Billnova\target\classes started by TWC-22 in D:\Billnova-2.0\Billnova)
+2026-10-22 19:01:19.892 [restartedMain] INFO  c.t.billnova.BillnovaApplication - The following 1 profile is active: "dev"
+2026-10-22 19:01:20.075 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-22 19:01:20.076 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-22 19:01:22.257 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-22 19:01:22.351 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 74 ms. Found 2 JPA repository interfaces.
+2026-10-22 19:01:24.719 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-10-22 19:01:24.751 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-22 19:01:24.751 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-22 19:01:24.853 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 4776 ms
+2026-10-22 19:01:25.810 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Starting...
+2026-10-22 19:01:26.125 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - BillnovaDevPool - Added connection org.postgresql.jdbc.PgConnection@d8df011
+2026-10-22 19:01:26.128 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Start completed.
+2026-10-22 19:01:26.168 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/billnova (PostgreSQL 16.15)
+2026-10-22 19:01:26.376 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 3 migrations (execution time 00:00.080s)
+2026-10-22 19:01:26.423 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 1
+2026-10-22 19:01:26.464 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "2 - users schema"
+2026-10-22 19:01:26.504 [restartedMain] ERROR o.f.core.internal.command.DbMigrate - Migration of schema "public" to version "2 - users schema" failed! Changes successfully rolled back.
+2026-10-22 19:01:26.518 [restartedMain] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Failed to execute script V2__users_schema.sql
+---------------------------------------------
+SQL State  : 42704
+Error Code : 0
+Message    : ERROR: type "timestampz" does not exist
+  Position: 442
+Location   : db/migration/V2__users_schema.sql (D:\Billnova-2.0\Billnova\target\classes\db\migration\V2__users_schema.sql)
+Line       : 2
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+2026-10-22 19:01:26.521 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Shutdown initiated...
+2026-10-22 19:01:26.532 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Shutdown completed.
+2026-10-22 19:01:26.540 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-10-22 19:01:26.568 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-22 19:01:26.658 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Failed to initialize dependency 'flywayInitializer' of LoadTimeWeaverAware bean 'entityManagerFactory': Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Failed to execute script V2__users_schema.sql
+---------------------------------------------
+SQL State  : 42704
+Error Code : 0
+Message    : ERROR: type "timestampz" does not exist
+  Position: 442
+Location   : db/migration/V2__users_schema.sql (D:\Billnova-2.0\Billnova\target\classes\db\migration\V2__users_schema.sql)
+Line       : 2
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.thewizecompany.billnova.BillnovaApplication.main(BillnovaApplication.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/flyway/autoconfigure/FlywayAutoConfiguration$FlywayConfiguration.class]: Failed to execute script V2__users_schema.sql
+---------------------------------------------
+SQL State  : 42704
+Error Code : 0
+Message    : ERROR: type "timestampz" does not exist
+  Position: 442
+Location   : db/migration/V2__users_schema.sql (D:\Billnova-2.0\Billnova\target\classes\db\migration\V2__users_schema.sql)
+Line       : 2
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1815)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:309)
+	... 13 common frames omitted
+Caused by: org.flywaydb.core.internal.exception.FlywayMigrateException: Failed to execute script V2__users_schema.sql
+---------------------------------------------
+SQL State  : 42704
+Error Code : 0
+Message    : ERROR: type "timestampz" does not exist
+  Position: 442
+Location   : db/migration/V2__users_schema.sql (D:\Billnova-2.0\Billnova\target\classes\db\migration\V2__users_schema.sql)
+Line       : 2
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:399)
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$applyMigrations$1(DbMigrate.java:283)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:59)
+	at org.flywaydb.core.internal.command.DbMigrate.applyMigrations(DbMigrate.java:282)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateGroup(DbMigrate.java:255)
+	at org.flywaydb.core.internal.command.DbMigrate.lambda$migrateAll$0(DbMigrate.java:153)
+	at org.flywaydb.database.postgresql.PostgreSQLAdvisoryLockTemplate.execute(PostgreSQLAdvisoryLockTemplate.java:77)
+	at org.flywaydb.database.postgresql.PostgreSQLAdvisoryLockTemplate.lambda$execute$0(PostgreSQLAdvisoryLockTemplate.java:60)
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:59)
+	at org.flywaydb.database.postgresql.PostgreSQLAdvisoryLockTemplate.execute(PostgreSQLAdvisoryLockTemplate.java:60)
+	at org.flywaydb.database.postgresql.PostgreSQLConnection.lock(PostgreSQLConnection.java:105)
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.lock(JdbcTableSchemaHistory.java:165)
+	at org.flywaydb.core.internal.command.DbMigrate.migrateAll(DbMigrate.java:153)
+	at org.flywaydb.core.internal.command.DbMigrate.migrate(DbMigrate.java:104)
+	at org.flywaydb.core.Flyway.lambda$migrate$3(Flyway.java:231)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:236)
+	at org.flywaydb.core.FlywayExecutor.execute(FlywayExecutor.java:120)
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:181)
+	at org.springframework.boot.flyway.autoconfigure.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:67)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811)
+	... 20 common frames omitted
+Caused by: org.flywaydb.core.internal.sqlscript.FlywaySqlScriptException: Failed to execute script V2__users_schema.sql
+---------------------------------------------
+SQL State  : 42704
+Error Code : 0
+Message    : ERROR: type "timestampz" does not exist
+  Position: 442
+Location   : db/migration/V2__users_schema.sql (D:\Billnova-2.0\Billnova\target\classes\db\migration\V2__users_schema.sql)
+Line       : 2
+Statement  : Run Flyway with -X option to see the actual statement causing the problem
+
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.handleException(DefaultSqlScriptExecutor.java:251)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:212)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:134)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.executeOnce(SqlMigrationExecutor.java:75)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.lambda$execute$0(SqlMigrationExecutor.java:66)
+	at org.flywaydb.core.internal.database.DefaultExecutionStrategy.execute(DefaultExecutionStrategy.java:31)
+	at org.flywaydb.core.internal.resolver.sql.SqlMigrationExecutor.execute(SqlMigrationExecutor.java:65)
+	at org.flywaydb.core.internal.command.DbMigrate.doMigrateGroup(DbMigrate.java:391)
+	... 40 common frames omitted
+Caused by: org.postgresql.util.PSQLException: ERROR: type "timestampz" does not exist
+  Position: 442
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2993)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2656)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:446)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:533)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:449)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:371)
+	at org.postgresql.jdbc.PgStatement.executeCachedSql(PgStatement.java:356)
+	at org.postgresql.jdbc.PgStatement.executeWithFlags(PgStatement.java:332)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:327)
+	at com.zaxxer.hikari.pool.ProxyStatement.execute(ProxyStatement.java:95)
+	at com.zaxxer.hikari.pool.HikariProxyStatement.execute(HikariProxyStatement.java)
+	at org.flywaydb.core.internal.jdbc.JdbcTemplate.executeStatement(JdbcTemplate.java:229)
+	at org.flywaydb.core.internal.sqlscript.ParsedSqlStatement.execute(ParsedSqlStatement.java:88)
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.executeStatement(DefaultSqlScriptExecutor.java:207)
+	... 46 common frames omitted
+2026-10-22 19:03:18.164 [restartedMain] INFO  c.t.billnova.BillnovaApplication - Starting BillnovaApplication using Java 21.0.12.1 with PID 16484 (D:\Billnova-2.0\Billnova\target\classes started by TWC-22 in D:\Billnova-2.0\Billnova)
+2026-10-22 19:03:18.172 [restartedMain] INFO  c.t.billnova.BillnovaApplication - The following 1 profile is active: "dev"
+2026-10-22 19:03:18.306 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-10-22 19:03:18.306 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-10-22 19:03:19.892 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-10-22 19:03:19.990 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 80 ms. Found 2 JPA repository interfaces.
+2026-10-22 19:03:22.381 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-10-22 19:03:22.413 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-10-22 19:03:22.413 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-10-22 19:03:22.503 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 4196 ms
+2026-10-22 19:03:23.376 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Starting...
+2026-10-22 19:03:23.689 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - BillnovaDevPool - Added connection org.postgresql.jdbc.PgConnection@152aa2fe
+2026-10-22 19:03:23.691 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Start completed.
+2026-10-22 19:03:23.733 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/billnova (PostgreSQL 16.15)
+2026-10-22 19:03:23.892 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 3 migrations (execution time 00:00.065s)
+2026-10-22 19:03:23.955 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 1
+2026-10-22 19:03:23.995 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "2 - users schema"
+2026-10-22 19:03:24.083 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "3 - auth schema"
+2026-10-22 19:03:24.203 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Successfully applied 2 migrations to schema "public", now at version v3 (execution time 00:00.144s)
+2026-10-22 19:03:24.422 [restartedMain] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-10-22 19:03:24.523 [restartedMain] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-10-22 19:03:25.238 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-10-22 19:03:25.306 [restartedMain] WARN  org.hibernate.orm.deprecation - HHH90000025: PostgreSQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-10-22 19:03:25.327 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/billnova]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.15
+	Default catalog/schema: billnova/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-10-22 19:03:26.719 [restartedMain] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-10-22 19:03:26.726 [restartedMain] INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 25)
+2026-10-22 19:03:26.788 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-10-22 19:03:26.851 [restartedMain] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'securityConfig' defined in file [D:\Billnova-2.0\Billnova\target\classes\com\thewizecompany\billnova\config\SecurityConfig.class]: Unsatisfied dependency expressed through constructor parameter 2: Error creating bean with name 'jacksonJsonMapper' defined in class path resource [org/springframework/boot/jackson/autoconfigure/JacksonAutoConfiguration.class]: Unsatisfied dependency expressed through method 'jacksonJsonMapper' parameter 0: Error creating bean with name 'jsonMapperBuilder' defined in class path resource [org/springframework/boot/jackson/autoconfigure/JacksonAutoConfiguration.class]: Unsatisfied dependency expressed through method 'jsonMapperBuilder' parameter 1: Error creating bean with name 'jsonFactory' defined in class path resource [org/springframework/boot/jackson/autoconfigure/JacksonAutoConfiguration.class]: Failed to instantiate [tools.jackson.core.json.JsonFactory]: Factory method 'jsonFactory' threw exception with message: Error creating bean with name 'org.springframework.boot.jackson.autoconfigure.JacksonAutoConfiguration$JacksonJsonCustomizerConfiguration': Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'spring.jackson-org.springframework.boot.jackson.autoconfigure.JacksonProperties': Could not bind properties to 'JacksonProperties' : prefix=spring.jackson, ignoreInvalidFields=false, ignoreUnknownFields=true
+2026-10-22 19:03:26.851 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-10-22 19:03:26.857 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Shutdown initiated...
+2026-10-22 19:03:26.868 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Shutdown completed.
+2026-10-22 19:03:26.876 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-10-22 19:03:26.900 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-10-22 19:03:26.947 [restartedMain] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Failed to bind properties under 'spring.jackson.serialization' to java.util.Map<tools.jackson.databind.SerializationFeature, java.lang.Boolean>:
+
+    Reason: failed to convert java.lang.String to tools.jackson.databind.SerializationFeature (caused by java.lang.IllegalArgumentException: No enum constant tools.jackson.databind.SerializationFeature.write-dates-as-timestamps)
+
+Action:
+
+Update your application's configuration. The following values are valid:
+
+    APPLY_JSON_INCLUDE_FOR_CONTAINERS
+    CLOSE_CLOSEABLE
+    EAGER_SERIALIZER_FETCH
+    FAIL_ON_EMPTY_BEANS
+    FAIL_ON_ORDER_MAP_BY_INCOMPARABLE_KEY
+    FAIL_ON_SELF_REFERENCES
+    FAIL_ON_UNWRAPPED_TYPE_IDENTIFIERS
+    FLUSH_AFTER_WRITE_VALUE
+    INDENT_OUTPUT
+    ORDER_MAP_ENTRIES_BY_KEYS
+    USE_EQUALITY_FOR_OBJECT_ID
+    WRAP_EXCEPTIONS
+    WRAP_ROOT_VALUE
+    WRITE_CHAR_ARRAYS_AS_JSON_ARRAYS
+    WRITE_EMPTY_JSON_ARRAYS
+    WRITE_SELF_REFERENCES_AS_NULL
+    WRITE_SINGLE_ELEM_ARRAYS_UNWRAPPED
+

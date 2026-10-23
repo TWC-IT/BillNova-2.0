@@ -10,14 +10,14 @@ import java.time.Instant;
         name = "users",
         indexes = {
                 @Index(
-                        name = "idx_username",
+                        name = "idx_users_username",
                         columnList = "username",
                         unique = true
                 )
         },
         uniqueConstraints = {
                 @UniqueConstraint(
-                        name = "uq_username",
+                        name = "uq_users_username",
                         columnNames = "username"
                 )
         }
@@ -53,7 +53,7 @@ public class Users extends BaseEntity{
             nullable = false
     )
     @Builder.Default
-    private boolean active = true;
+    private boolean isActive = true;
 
     @Column(name = "account_locked_until")
     private Instant accountLockedUntil;

@@ -1,0 +1,50 @@
+# ================================================================
+# THEWIZECOMPANY INVOICING APPLICATION — LOCAL DEVELOPMENT INFRASTRUCTURE
+# ================================================================
+# Starts PostgreSQL  locally for development.
+# Run with: docker compose up -d
+# Stop with: docker compose down
+# ================================================================
+
+services:
+
+  # ── POSTGRESQL ───────────────────────────────────────────────
+  postgres:
+    image: postgres:16-alpine
+    container_name: billnova-postgres
+    env_file:
+      - .env
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: ${DB_NAME}
+      POSTGRES_USER: ${DB_USERNAME}
+      POSTGRES_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "5432:5432"
+    volumes:
+      # Data persists between docker compose down/up
+      - billnova_postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $$DB_USERNAME -d $$DB_NAME"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # ── REDIS ────────────────────────────────────────────────────
+#  redis:
+#    image: redis:7-alpine
+#    container_name: wizetracker-redis
+#    restart: unless-stopped
+#    ports:
+#      - "6379:6379"
+#    volumes:
+#      - wizetracker_redis_data:/data
+#    healthcheck:
+#      test: ["CMD", "redis-cli", "ping"]
+#      interval: 10s
+#      timeout: 5s
+#      retries: 5
+
+volumes:
+  billnova_postgres_data:
+#  wizetracker_redis_data:
