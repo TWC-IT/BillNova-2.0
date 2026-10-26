@@ -1,72 +1,33 @@
-# ================================================================
-# DEVELOPMENT ENVIRONMENT CONFIGURATION
-# ================================================================
-# Overrides application.yml for local development only.
-# This file can be committed to Git — it has NO secrets.
-# Secrets in dev come from your local dev.env file or
-# IntelliJ Run Configuration environment variables.
-# ================================================================
+# Local development overrides. Contains NO secrets — everything sensitive
+# comes from environment variables / your untracked .env file.
 
 spring:
-  # ── DATABASE (local Docker PostgreSQL) ─────────────────────
   datasource:
     url: jdbc:postgresql://localhost:5432/${DB_NAME}
     username: ${DB_USERNAME}
     password: ${DB_PASSWORD}
     driver-class-name: org.postgresql.Driver
     hikari:
-      # Connection pool settings for development
-      # (smaller than production — your laptop has limits)
       pool-name: BillnovaDevPool
       minimum-idle: 2
       maximum-pool-size: 10
       idle-timeout: 300000
       connection-timeout: 20000
-      # Validates connection before handing it from pool
-      connection-test-query: SELECT 1
 
-  # ── REDIS (local Docker Redis) ──────────────────────────────
-#  data:
-#    redis:
-#      host: ${REDIS_HOST:localhost}
-#      port: ${REDIS_PORT:6379}
-#      password: ${REDIS_PASSWORD:}
-#      timeout: 2000ms
-#      lettuce:
-#        pool:
-#          max-active: 5
-#          max-idle: 3
-#          min-idle: 1
-
-  server:
-    address: 0.0.0.0
-    port: 8080
-
-  # ── JPA (show SQL in dev for debugging) ────────────────────
   jpa:
-    show-sql: true
+    # SQL is logged through org.hibernate.SQL below; leaving show-sql on would print it twice.
+    show-sql: false
 
-# ── LOGGING (verbose in dev) ─────────────────────────────────
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,logfile
+
 logging:
   level:
-    com.thewizecompany.portal: DEBUG
-    org.springframework.security: DEBUG
+    com.thewizecompany.billnova: DEBUG
+    org.springframework.security: INFO
     org.hibernate.SQL: DEBUG
-    org.hibernate.type.descriptor.sql: TRACE
-    org.hibernate.engine.jdbc.spi.SqlExceptionHelper: DEBUG
-    org.springframework.transaction: TRACE
   pattern:
     console: "%d{HH:mm:ss.SSS} [%thread] %-5level [%X{correlationId}] %logger{36} - %msg%n"
-
-# ── JWT SECRETS FOR DEV (NOT for production) ─────────────────
-# In production these come from environment variables.
-# In dev we set them here for convenience.
-# These are fake secrets — safe to commit.
-app:
-  timezone: "Asia/Kolkata"
-  security:
-    cors:
-      allowed-origins: ${CORS_ALLOWED_ORIGINS}
-    jwt:
-      access-token-secret: ${JWT_ACCESS_SECRET}
-      refresh-token-secret: ${JWT_REFRESH_SECRET}
