@@ -74,6 +74,20 @@ public class JwtUtil {
                 .compact();
     }
 
+    public String generateForgotPasswordToken(UUID userId){
+        long now = System.currentTimeMillis();
+
+        return Jwts.builder()
+                .id(UUID.randomUUID().toString())
+                .subject(userId.toString())
+                .issuedAt(new Date(now))
+                .expiration(new Date(
+                        now + appProperties.getSecurity().getJwt().getAccessTokenExpiryMs()
+                ))
+                .signWith(accessTokenKey)
+                .compact();
+    }
+
     public Claims validateAccessToken(String token) {
         return Jwts.parser()
                 .verifyWith(accessTokenKey)
@@ -85,6 +99,14 @@ public class JwtUtil {
     public Claims validateRefreshToken(String token) {
         return Jwts.parser()
                 .verifyWith(refreshTokenKey)
+                .build()
+                .parseSignedClaims(token)
+                .getPayload();
+    }
+
+    public Claims validateForgotPasswordToken(String token) {
+        return Jwts.parser()
+                .verifyWith(accessTokenKey)
                 .build()
                 .parseSignedClaims(token)
                 .getPayload();

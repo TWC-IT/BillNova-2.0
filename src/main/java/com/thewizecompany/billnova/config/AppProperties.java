@@ -22,6 +22,10 @@ public class AppProperties {
     @Valid
     private final Security security = new Security();
     private String timezone = "UTC";
+    @NotBlank(message = "Admin Email must be configured")
+    private String resetEmail;
+    @NotBlank(message = "Password Reset URL must be configured")
+    private String passwordResetUrl;
 
     @Getter
     @Setter

@@ -26,6 +26,18 @@ spring:
         # HTTP request including view rendering — wastes connections.
     open-in-view: false
 
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${PASSWORD_RESET_EMAIL}
+    password: ${EMAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
   flyway:
     enabled: true
     locations: classpath:db/migration
@@ -125,6 +137,8 @@ app:
       # Max login attempts before lockout
       max-login-attempts: ${MAX_LOGIN_ATTEMPTS:5}
       # Max pin login attempts before lockout (lockout lasts 30 minutes)
+  reset-email: gaurshaurya60@gmail.com
+  password-reset-url: http://localhost:5173
 
 
 

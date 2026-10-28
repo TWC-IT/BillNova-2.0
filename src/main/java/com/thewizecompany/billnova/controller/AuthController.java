@@ -2,9 +2,7 @@ package com.thewizecompany.billnova.controller;
 
 
 import com.thewizecompany.billnova.config.AppProperties;
-import com.thewizecompany.billnova.dto.AuthResponse;
-import com.thewizecompany.billnova.dto.AuthResult;
-import com.thewizecompany.billnova.dto.LoginRequest;
+import com.thewizecompany.billnova.dto.*;
 import com.thewizecompany.billnova.responses.ApiResponse;
 import com.thewizecompany.billnova.service.AuthService;
 import jakarta.servlet.http.HttpServletRequest;
@@ -17,10 +15,7 @@ import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseCookie;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.annotation.AuthenticationPrincipal;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.net.URLDecoder;
 import java.net.URLEncoder;
@@ -96,6 +91,33 @@ public class AuthController {
         return ResponseEntity.ok(
                 ApiResponse.ok(toAuthResponse(result), "Refresh Successful")
         );
+    }
+
+    @PatchMapping("/change-password")
+    public ResponseEntity<ApiResponse<Void>> changePassword(
+            @Valid @RequestBody ChangePasswordRequest request,
+            @AuthenticationPrincipal String username
+    ){
+        authService.changePassword(request, username);
+
+        return ResponseEntity.ok(ApiResponse.ok("Change Password Successful"));
+    }
+
+    @PostMapping("/forgot-password")
+    public ResponseEntity<ApiResponse<Void>> forgetPassword(
+            @Valid @RequestBody ForgotPasswordRequest request){
+        authService.forgotPassword(request);
+
+        return ResponseEntity.ok(ApiResponse.ok("Email sent to admin successful"));
+    }
+
+    @PostMapping("/update-password")
+    public ResponseEntity<ApiResponse<Void>> updatePassword(
+            @Valid @RequestBody UpdatePasswordRequest request,
+            @AuthenticationPrincipal String username
+    ){
+        authService.updatePassword(request, username);
+        return ResponseEntity.ok(ApiResponse.ok("Password updated successfully"));
     }
 
     //Helper Methods..........................................................
