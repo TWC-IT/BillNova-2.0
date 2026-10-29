@@ -42,7 +42,7 @@ INSERT INTO users(
           uuid_generate_v4(),
           'System',
           'Admin',
-          'TWC-Admin',
+          'twc-admin',
           --Hash for Admin@123
           '$2a$10$3eEezsAtJHbbJLgynj4F2OY0EQHuR/yviq8yGCMa3EGSRva7F/zrq',
           'ADMIN'

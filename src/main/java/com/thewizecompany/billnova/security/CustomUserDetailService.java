@@ -25,10 +25,9 @@ public class CustomUserDetailService implements UserDetailsService {
 
     @Override
     @NullMarked
-    @Transactional(readOnly = true)
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException{
 
-        Users user = userRepository.findByUsernameAndIsDeletedFalseAndIsActiveTrue(
+        Users user = userRepository.findByUsernameAndIsDeletedFalse(
                 username.toLowerCase().trim()
         )
                 .orElseThrow(() -> {

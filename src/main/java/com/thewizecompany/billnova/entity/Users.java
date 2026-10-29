@@ -4,6 +4,7 @@ import com.thewizecompany.billnova.enums.Role;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.time.Duration;
 import java.time.Instant;
 
 @Table(
@@ -75,10 +76,14 @@ public class Users extends BaseEntity{
         return Instant.now().isBefore(accountLockedUntil);
     }
 
-    public void recordFailedLogin(){
+    public void recordFailedLogin(int maxAttempts, Duration lockDuration){
+        if(accountLockedUntil != null && !isAccountLocked()){
+            this.failedLoginAttempts = 0;
+            this.accountLockedUntil = null;
+        }
         this.failedLoginAttempts++;
-        if(this.failedLoginAttempts >= 5){
-            this.accountLockedUntil = Instant.now().plusSeconds(1800);
+        if(this.failedLoginAttempts >= maxAttempts){
+            this.accountLockedUntil = Instant.now().plus(lockDuration);
         }
     }
 

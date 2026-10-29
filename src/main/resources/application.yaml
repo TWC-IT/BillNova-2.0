@@ -5,14 +5,15 @@ spring:
   profiles:
     active: ${SPRING_PROFILES_ACTIVE}
 
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
+
   # JPA / HIBERNATE ----------------------------------
   jpa:
     hibernate:
       ddl-auto: validate
     properties:
       hibernate:
-        #postgres dialect for proper database integration
-        dialect: org.hibernate.dialect.PostgreSQLDialect
         #Batches insert/update for sql performance
         jdbc:
           batch_size: 25
@@ -25,10 +26,21 @@ spring:
         # HTTP request including view rendering — wastes connections.
     open-in-view: false
 
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: ${PASSWORD_RESET_EMAIL}
+    password: ${EMAIL_PASSWORD}
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+
   flyway:
     enabled: true
     locations: classpath:db/migration
-    baseline-on-migrate: true
     validate-on-migrate: true
     table: flyway_schema_history
 
@@ -79,7 +91,7 @@ management:
     web:
       exposure:
         # ADDED 'logfile' HERE
-        include: health,info,metrics,prometheus,logfile
+        include: health,info
       base-path: /actuator
   endpoint:
     health:
@@ -124,7 +136,9 @@ app:
       requests-per-minute: ${RATE_LIMIT_RPM:60}
       # Max login attempts before lockout
       max-login-attempts: ${MAX_LOGIN_ATTEMPTS:5}
-      # Max pin login attempts before lockout
+      # Max pin login attempts before lockout (lockout lasts 30 minutes)
+  reset-email: gaurshaurya60@gmail.com
+  password-reset-url: http://localhost:5173
 
 
 

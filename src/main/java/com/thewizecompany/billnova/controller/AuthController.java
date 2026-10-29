@@ -2,23 +2,22 @@ package com.thewizecompany.billnova.controller;
 
 
 import com.thewizecompany.billnova.config.AppProperties;
-import com.thewizecompany.billnova.dto.AuthResponse;
-import com.thewizecompany.billnova.dto.AuthResult;
-import com.thewizecompany.billnova.dto.LoginRequest;
+import com.thewizecompany.billnova.dto.*;
 import com.thewizecompany.billnova.responses.ApiResponse;
 import com.thewizecompany.billnova.service.AuthService;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.core.env.Environment;
+import org.springframework.core.env.Profiles;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.ResponseCookie;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.web.bind.annotation.*;
 
+import java.net.URLDecoder;
 import java.net.URLEncoder;
 import java.nio.charset.StandardCharsets;
 import java.time.Duration;
@@ -30,8 +29,10 @@ public class AuthController {
 
     private final AuthService authService;
     private final AppProperties appProperties;
+    private final Environment environment;
 
     private static final String REFRESH_COOKIE_NAME = "refreshToken";
+    private static final String REFRESH_COOKIE_PATH = "/api/v2/auth";
 
     @PostMapping("/login")
     public ResponseEntity<ApiResponse<AuthResponse>> login(
@@ -54,13 +55,75 @@ public class AuthController {
         );
     }
 
+    @PostMapping("/logout")
+    public ResponseEntity<ApiResponse<Void>> logout(
+            @AuthenticationPrincipal String username,
+            HttpServletRequest httpRequest,
+            HttpServletResponse httpResponse
+    ){
+        String refreshToken = extractRefreshCookie(httpRequest);
+        String authHeader = httpRequest.getHeader(HttpHeaders.AUTHORIZATION);
+        String accessToken = (authHeader != null && authHeader.startsWith("Bearer "))
+                ? authHeader.substring(7) : null;
+        authService.logout(accessToken, refreshToken);
+        httpResponse.addHeader(HttpHeaders.SET_COOKIE, clearRefreshCookie().toString());
+        return ResponseEntity.ok(
+                ApiResponse.ok("Logout Successful")
+        );
+    }
+
+    @PostMapping("/refresh")
+    public ResponseEntity<ApiResponse<AuthResponse>> refresh(
+            HttpServletRequest httpRequest,
+            HttpServletResponse httpResponse
+    ){
+        String refreshToken = extractRefreshCookie(httpRequest);
+        if(refreshToken == null) {
+            return ResponseEntity.status(401)
+                    .body(ApiResponse.error(
+                            "Refresh Token not found. Please login again.",
+                            "REFRESH_TOKEN_MISSING"
+                    ));
+        }
+        AuthResult result = authService.refresh(refreshToken, extractIpAddress(httpRequest), extractDeviceInfo(httpRequest));
+        httpResponse.addHeader(HttpHeaders.SET_COOKIE, buildRefreshCookie(result.getRefreshToken()).toString());
+
+        return ResponseEntity.ok(
+                ApiResponse.ok(toAuthResponse(result), "Refresh Successful")
+        );
+    }
+
+    @PatchMapping("/change-password")
+    public ResponseEntity<ApiResponse<Void>> changePassword(
+            @Valid @RequestBody ChangePasswordRequest request,
+            @AuthenticationPrincipal String username
+    ){
+        authService.changePassword(request, username);
+
+        return ResponseEntity.ok(ApiResponse.ok("Change Password Successful"));
+    }
+
+    @PostMapping("/forgot-password")
+    public ResponseEntity<ApiResponse<Void>> forgetPassword(
+            @Valid @RequestBody ForgotPasswordRequest request){
+        authService.forgotPassword(request);
+
+        return ResponseEntity.ok(ApiResponse.ok("Email sent to admin successful"));
+    }
+
+    @PostMapping("/reset-password")
+    public ResponseEntity<ApiResponse<Void>> resetPassword(
+            @Valid @RequestBody ResetPasswordRequest request
+
+    ){
+        authService.resetPassword(request);
+        return ResponseEntity.ok(ApiResponse.ok("Password updated successfully"));
+    }
+
     //Helper Methods..........................................................
 
     private String extractIpAddress(HttpServletRequest httpRequest) {
-        String forwarded = httpRequest.getHeader("X-Forwarded-For");
-        if (forwarded != null && !forwarded.isBlank()) {
-            return forwarded.split(",")[0].trim();
-        }
+
         return httpRequest.getRemoteAddr();
     }
 
@@ -73,8 +136,7 @@ public class AuthController {
     }
 
     private boolean isProductionEnvironment(){
-        String profile = System.getProperty("spring.profiles.active", "dev");
-        return profile.contains("prod");
+        return environment.acceptsProfiles(Profiles.of("prod"));
     }
 
     //Mapper Helper Function ........................................................
@@ -104,5 +166,26 @@ public class AuthController {
                                 .getJwt()
                                 .getRefreshTokenExpiryMs()
                 )).build();
+    }
+
+    private String extractRefreshCookie(HttpServletRequest httpRequest) {
+        if(httpRequest.getCookies() != null) {
+            for(var cookie: httpRequest.getCookies()){
+                if(REFRESH_COOKIE_NAME.equals(cookie.getName())) {
+                    return URLDecoder.decode(cookie.getValue(), StandardCharsets.UTF_8);
+                }
+            }
+        }
+        return null;
+    }
+
+    private ResponseCookie clearRefreshCookie() {
+        return ResponseCookie.from(REFRESH_COOKIE_NAME, "")
+                .httpOnly(true)
+                .secure(isProductionEnvironment())
+                .sameSite("Lax")
+                .path(REFRESH_COOKIE_PATH)
+                .maxAge(0)
+                .build();
     }
 }

@@ -14,6 +14,7 @@ import java.util.Optional;
 
 @Configuration
 @EnableTransactionManagement
+@EnableJpaAuditing
 @EnableJpaRepositories(
         basePackages = "com.thewizecompany.billnova"
 )

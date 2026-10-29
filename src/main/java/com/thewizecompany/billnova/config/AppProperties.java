@@ -1,6 +1,8 @@
 package com.thewizecompany.billnova.config;
 
 
+import jakarta.validation.Valid;
+import jakarta.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 import jakarta.validation.constraints.NotBlank;
@@ -17,8 +19,13 @@ import java.util.List;
 @ConfigurationProperties(prefix = "app")
 public class AppProperties {
 
+    @Valid
     private final Security security = new Security();
     private String timezone = "UTC";
+    @NotBlank(message = "Admin Email must be configured")
+    private String resetEmail;
+    @NotBlank(message = "Password Reset URL must be configured")
+    private String passwordResetUrl;
 
     @Getter
     @Setter
@@ -32,9 +39,11 @@ public class AppProperties {
         public static class Jwt {
 
             @NotBlank(message = "Jwt access token secret must be configured")
+            @Size(min = 32, message = "jwt access token secret must be at least 32 characters")
             private String accessTokenSecret;
 
             @NotBlank(message = "Jwt refresh token secret must be configured")
+            @Size(min = 32, message = "jwt refresh token secret must be at least 32 characters")
             private String refreshTokenSecret;
 
             @Positive
