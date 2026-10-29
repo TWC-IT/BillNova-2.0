@@ -76,13 +76,14 @@ public class JwtUtil {
 
     public String generateForgotPasswordToken(UUID userId){
         long now = System.currentTimeMillis();
+        long fifteenMinutesInMillis = 15 * 60 * 1000;
 
         return Jwts.builder()
                 .id(UUID.randomUUID().toString())
                 .subject(userId.toString())
                 .issuedAt(new Date(now))
                 .expiration(new Date(
-                        now + appProperties.getSecurity().getJwt().getAccessTokenExpiryMs()
+                        now + fifteenMinutesInMillis
                 ))
                 .signWith(accessTokenKey)
                 .compact();

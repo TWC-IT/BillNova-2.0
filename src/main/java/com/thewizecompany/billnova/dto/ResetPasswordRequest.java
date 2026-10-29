@@ -8,7 +8,11 @@ import lombok.Setter;
 
 @Getter
 @Setter
-public class UpdatePasswordRequest {
+public class ResetPasswordRequest {
+
+    @NotBlank(message = "Reset token is required")
+    private String token;
+
     @NotBlank(message = "new password is required")
     @Size(min = 8, max = 128)
     @Pattern(

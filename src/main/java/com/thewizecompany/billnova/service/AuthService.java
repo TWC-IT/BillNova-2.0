@@ -11,6 +11,7 @@ import com.thewizecompany.billnova.repository.RefreshTokenRepository;
 import com.thewizecompany.billnova.repository.UserRepository;
 import com.thewizecompany.billnova.security.JwtUtil;
 import io.jsonwebtoken.Claims;
+import io.jsonwebtoken.JwtException;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import jakarta.transaction.Transactional;
@@ -242,9 +243,9 @@ public class AuthService {
         }
 
         String recoverToken = jwtUtil.generateForgotPasswordToken(user.getId());
-        String recoverTokenHash = hashToken(recoverToken);
 
-        String resetUrl = appProperties.getPasswordResetUrl() + "?token=" + recoverTokenHash;
+
+        String resetUrl = appProperties.getPasswordResetUrl() + "?token=" + recoverToken;
 
         String subject = "Password Reset Request for User: " +  user.getUsername();
         String body = """
@@ -428,16 +429,29 @@ public class AuthService {
 
 
     @Transactional
-    public void updatePassword(UpdatePasswordRequest request, String username){
-        Users user = userRepository.findByUsernameAndIsDeletedFalse(username)
-                .orElseThrow(()-> new ResourceNotFoundException("User not found", username));
-
+    public void resetPassword(ResetPasswordRequest request){
         if(!request.getNewPassword().equals(request.getConfirmNewPassword())){
             throw new BusinessException("Password Mismatch");
         }
+        Claims claims;
+        try{
+            claims = jwtUtil.validateForgotPasswordToken(request.getToken());
+        } catch (JwtException e){
+            throw new BusinessException("Invalid or expired password reset token");
+        }
+
+        UUID userId = UUID.fromString(claims.getSubject());
+
+        Users user = userRepository.findByIdAndIsDeletedFalse(userId)
+                .orElseThrow(()-> new ResourceNotFoundException("User not found", userId.toString()));
+
+        if(!user.isActive() || user.isDeleted()){
+            throw new BusinessException("User is not active or deleted");
+        }
+
 
         user.setPasswordHash(passwordEncoder.encode(request.getNewPassword()));
-
+        userRepository.save(user);
     }
 
 

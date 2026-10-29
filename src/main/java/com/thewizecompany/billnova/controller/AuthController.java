@@ -111,12 +111,12 @@ public class AuthController {
         return ResponseEntity.ok(ApiResponse.ok("Email sent to admin successful"));
     }
 
-    @PostMapping("/update-password")
-    public ResponseEntity<ApiResponse<Void>> updatePassword(
-            @Valid @RequestBody UpdatePasswordRequest request,
-            @AuthenticationPrincipal String username
+    @PostMapping("/reset-password")
+    public ResponseEntity<ApiResponse<Void>> resetPassword(
+            @Valid @RequestBody ResetPasswordRequest request
+
     ){
-        authService.updatePassword(request, username);
+        authService.resetPassword(request);
         return ResponseEntity.ok(ApiResponse.ok("Password updated successfully"));
     }
 
