@@ -29,22 +29,5 @@ services:
       interval: 10s
       timeout: 5s
       retries: 5
-
-  # ── REDIS ────────────────────────────────────────────────────
-#  redis:
-#    image: redis:7-alpine
-#    container_name: wizetracker-redis
-#    restart: unless-stopped
-#    ports:
-#      - "6379:6379"
-#    volumes:
-#      - wizetracker_redis_data:/data
-#    healthcheck:
-#      test: ["CMD", "redis-cli", "ping"]
-#      interval: 10s
-#      timeout: 5s
-#      retries: 5
-
 volumes:
   billnova_postgres_data:
-#  wizetracker_redis_data:
