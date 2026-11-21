@@ -24,8 +24,8 @@ CREATE TABLE projects (
 
     CONSTRAINT pk_projects PRIMARY KEY (id),
     CONSTRAINT uq_projects_code UNIQUE (code),
-    CONSTRAINT fk_projects_client_id FOREIGN KEY (client_id) REFERENCES clients(id),
-    CONSTRAINT fk_projects_client_contact_id FOREIGN KEY (client_contact_id) REFERENCES client_contacts(id),
+    CONSTRAINT fk_projects_client_id FOREIGN KEY (client_id) REFERENCES clients(id) ON DELETE CASCADE ,
+    CONSTRAINT fk_projects_client_contact_id FOREIGN KEY (client_contact_id) REFERENCES client_contacts(id) ON DELETE CASCADE ,
     CONSTRAINT chk_projects_status CHECK ( status IN ('DRAFT', 'ONGOING', 'COMPLETED', 'LOST') )
 );
 
@@ -42,6 +42,7 @@ CREATE TABLE change_orders (
     code VARCHAR(50) NOT NULL ,
     status VARCHAR(30) NOT NULL ,
     project_id UUID NOT NULL ,
+    meta_data TEXT,
     amount DECIMAL(19, 2) NOT NULL ,
     invoiced_amount DECIMAL(19, 2) NOT NULL ,
     received_amount DECIMAL(19, 2) NOT NULL ,
@@ -55,7 +56,7 @@ CREATE TABLE change_orders (
 
     CONSTRAINT pk_change_orders PRIMARY KEY (id),
     CONSTRAINT uq_change_orders_code UNIQUE (code),
-    CONSTRAINT fk_change_orders_project_id FOREIGN KEY (project_id) REFERENCES projects(id),
+    CONSTRAINT fk_change_orders_project_id FOREIGN KEY (project_id) REFERENCES projects(id) ON DELETE CASCADE ,
     CONSTRAINT chk_change_orders_status CHECK ( status IN ('DRAFT', 'ISSUED', 'PAID', 'LOST'))
 );
 

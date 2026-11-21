@@ -20,5 +20,6 @@ public class CreateProjectRequest {
     private UUID clientId;
     @NotNull(message = "Client Contact Id is required")
     private UUID clientContactId;
+    private boolean saveAsDraft;
 
 }

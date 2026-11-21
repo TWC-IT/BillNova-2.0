@@ -2,6 +2,9 @@
 # comes from environment variables / your untracked .env file.
 
 spring:
+  dotenv:
+    filename:
+      dev.env
   datasource:
     url: jdbc:postgresql://localhost:5432/${DB_NAME}
     username: ${DB_USERNAME}
