@@ -1,0 +1,146 @@
+2026-11-04 14:09:03.311 [restartedMain] INFO  c.t.billnova.BillnovaApplication - Starting BillnovaApplication using Java 21.0.12.1 with PID 17064 (D:\Billnova-2.0\Billnova\target\classes started by TWC-22 in D:\Billnova-2.0\Billnova)
+2026-11-04 14:09:03.321 [restartedMain] DEBUG c.t.billnova.BillnovaApplication - Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-11-04 14:09:03.323 [restartedMain] INFO  c.t.billnova.BillnovaApplication - The following 1 profile is active: "dev"
+2026-11-04 14:09:03.492 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-11-04 14:09:03.493 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-11-04 14:09:05.240 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-04 14:09:05.372 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 106 ms. Found 2 JPA repository interfaces.
+2026-11-04 14:09:09.589 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-11-04 14:09:09.630 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-11-04 14:09:09.631 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-11-04 14:09:09.753 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 6259 ms
+2026-11-04 14:09:10.408 [restartedMain] DEBUG c.t.billnova.security.JwtAuthFilter - Filter 'jwtAuthFilter' configured for use
+2026-11-04 14:09:11.103 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Starting...
+2026-11-04 14:09:11.617 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - BillnovaDevPool - Added connection org.postgresql.jdbc.PgConnection@58207cf9
+2026-11-04 14:09:11.632 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Start completed.
+2026-11-04 14:09:11.724 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/billnova (PostgreSQL 16.15)
+2026-11-04 14:09:12.050 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 4 migrations (execution time 00:00.087s)
+2026-11-04 14:09:12.099 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": 3
+2026-11-04 14:09:12.151 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "4 - client schema"
+2026-11-04 14:09:12.482 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Successfully applied 1 migration to schema "public", now at version v4 (execution time 00:00.279s)
+2026-11-04 14:09:12.767 [restartedMain] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-04 14:09:12.939 [restartedMain] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-11-04 14:09:14.097 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-04 14:09:14.299 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/billnova]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.15
+	Default catalog/schema: billnova/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-04 14:09:16.590 [restartedMain] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-04 14:09:16.598 [restartedMain] INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 25)
+2026-11-04 14:09:16.727 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-11-04 14:09:17.291 [restartedMain] INFO  o.s.d.j.r.q.QueryEnhancerFactories - Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-11-04 14:09:17.628 [restartedMain] INFO  o.s.s.c.a.a.c.InitializeUserDetailsBeanManagerConfigurer$InitializeUserDetailsManagerConfigurer - Global AuthenticationManager configured with UserDetailsService bean with name customUserDetailService
+2026-11-04 14:09:20.323 [restartedMain] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 4 endpoints beneath base path '/actuator'
+2026-11-04 14:09:20.450 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path '/'
+2026-11-04 14:09:20.467 [restartedMain] INFO  c.t.billnova.BillnovaApplication - Started BillnovaApplication in 18.392 seconds (process running for 19.822)
+2026-11-04 14:09:33.754 [SpringApplicationShutdownHook] INFO  o.s.boot.tomcat.GracefulShutdown - Commencing graceful shutdown. Waiting for active requests to complete
+2026-11-04 14:09:33.769 [tomcat-shutdown] INFO  o.s.boot.tomcat.GracefulShutdown - Graceful shutdown complete
+2026-11-04 14:09:33.779 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-11-04 14:09:33.792 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Shutdown initiated...
+2026-11-04 14:09:33.830 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Shutdown completed.
+2026-11-07 16:37:40.658 [restartedMain] INFO  c.t.billnova.BillnovaApplication - Starting BillnovaApplication using Java 21.0.10 with PID 13015 (/Users/pradumnkala/Programming/BillNova-2.0/target/classes started by pradumnkala in /Users/pradumnkala/Programming/BillNova-2.0)
+2026-11-07 16:37:40.658 [restartedMain] DEBUG c.t.billnova.BillnovaApplication - Running with Spring Boot v4.1.1, Spring v7.0.9
+2026-11-07 16:37:40.659 [restartedMain] INFO  c.t.billnova.BillnovaApplication - The following 1 profile is active: "dev"
+2026-11-07 16:37:40.676 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-11-07 16:37:40.677 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-11-07 16:37:40.906 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-11-07 16:37:40.925 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 5 JPA repository interfaces.
+2026-11-07 16:37:41.322 [restartedMain] INFO  o.s.boot.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2026-11-07 16:37:41.329 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2026-11-07 16:37:41.329 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/11.0.24]
+2026-11-07 16:37:41.340 [restartedMain] INFO  o.s.b.w.c.s.WebApplicationContextInitializer - Root WebApplicationContext: initialization completed in 663 ms
+2026-11-07 16:37:41.416 [restartedMain] DEBUG c.t.billnova.security.JwtAuthFilter - Filter 'jwtAuthFilter' configured for use
+2026-11-07 16:37:41.496 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Starting...
+2026-11-07 16:37:41.578 [restartedMain] INFO  com.zaxxer.hikari.pool.HikariPool - BillnovaDevPool - Added connection org.postgresql.jdbc.PgConnection@31689a92
+2026-11-07 16:37:41.578 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Start completed.
+2026-11-07 16:37:41.588 [restartedMain] INFO  org.flywaydb.core.FlywayExecutor - Database: jdbc:postgresql://localhost:5432/billnova (PostgreSQL 16.14)
+2026-11-07 16:37:41.614 [restartedMain] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Schema history table "public"."flyway_schema_history" does not exist yet
+2026-11-07 16:37:41.616 [restartedMain] INFO  o.f.core.internal.command.DbValidate - Successfully validated 5 migrations (execution time 00:00.007s)
+2026-11-07 16:37:41.625 [restartedMain] INFO  o.f.c.i.s.JdbcTableSchemaHistory - Creating Schema History table "public"."flyway_schema_history" ...
+2026-11-07 16:37:41.659 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Current version of schema "public": << Empty Schema >>
+2026-11-07 16:37:41.662 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "1 - init schema"
+2026-11-07 16:37:41.675 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "2 - users schema"
+2026-11-07 16:37:41.691 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "3 - auth schema"
+2026-11-07 16:37:41.705 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "4 - client schema"
+2026-11-07 16:37:41.721 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Migrating schema "public" to version "5 - project schema"
+2026-11-07 16:37:41.736 [restartedMain] INFO  o.f.core.internal.command.DbMigrate - Successfully applied 5 migrations to schema "public", now at version v5 (execution time 00:00.046s)
+2026-11-07 16:37:41.772 [restartedMain] INFO  org.hibernate.orm.jpa - HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-11-07 16:37:41.797 [restartedMain] INFO  org.hibernate.orm.core - HHH000001: Hibernate ORM core version 7.4.5.Final
+2026-11-07 16:37:41.931 [restartedMain] INFO  o.s.o.j.p.SpringPersistenceUnitInfo - No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-11-07 16:37:41.965 [restartedMain] INFO  o.hibernate.orm.connections.pooling - HHH10001005: Database info:
+	Database JDBC URL [jdbc:postgresql://localhost:5432/billnova]
+	Database driver: PostgreSQL JDBC Driver
+	Database dialect: PostgreSQLDialect
+	Database version: 16.14
+	Default catalog/schema: billnova/public
+	Autocommit mode: undefined/unknown
+	Isolation level: READ_COMMITTED [default READ_COMMITTED]
+	JDBC fetch size: none
+	Pool: DataSourceConnectionProvider
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2026-11-07 16:37:42.343 [restartedMain] INFO  org.hibernate.orm.core - HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-11-07 16:37:42.344 [restartedMain] INFO  org.hibernate.orm.jdbc.batch - HHH100501: Automatic JDBC statement batching enabled (maximum batch size 25)
+2026-11-07 16:37:42.366 [restartedMain] ERROR o.s.o.j.LocalContainerEntityManagerFactoryBean - Failed to initialize JPA EntityManagerFactory: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema validation: missing column [meta_data] in table [change_orders]
+2026-11-07 16:37:42.366 [restartedMain] WARN  o.s.b.w.s.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema validation: missing column [meta_data] in table [change_orders]
+2026-11-07 16:37:42.367 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Shutdown initiated...
+2026-11-07 16:37:42.368 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - BillnovaDevPool - Shutdown completed.
+2026-11-07 16:37:42.369 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2026-11-07 16:37:42.374 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-11-07 16:37:42.378 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'entityManagerFactory' defined in class path resource [org/springframework/boot/hibernate/autoconfigure/HibernateJpaConfiguration.class]: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema validation: missing column [meta_data] in table [change_orders]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1815)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:603)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:201)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:977)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:621)
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at com.thewizecompany.billnova.BillnovaApplication.main(BillnovaApplication.java:17)
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52)
+Caused by: jakarta.persistence.PersistenceException: Unable to build Hibernate SessionFactory  [persistence unit: default] ; nested exception is org.hibernate.tool.schema.spi.SchemaManagementException: Schema validation: missing column [meta_data] in table [change_orders]
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:448)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.afterPropertiesSet(AbstractEntityManagerFactoryBean.java:411)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.afterPropertiesSet(LocalContainerEntityManagerFactoryBean.java:419)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1862)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1811)
+	... 18 common frames omitted
+Caused by: org.hibernate.tool.schema.spi.SchemaManagementException: Schema validation: missing column [meta_data] in table [change_orders]
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.validateTable(AbstractSchemaValidator.java:141)
+	at org.hibernate.tool.schema.internal.GroupedSchemaValidatorImpl.validateTables(GroupedSchemaValidatorImpl.java:42)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.performValidation(AbstractSchemaValidator.java:97)
+	at org.hibernate.tool.schema.internal.AbstractSchemaValidator.doValidation(AbstractSchemaValidator.java:75)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.performDatabaseAction(SchemaManagementToolCoordinator.java:278)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.lambda$process$1(SchemaManagementToolCoordinator.java:101)
+	at java.base/java.util.HashMap.forEach(HashMap.java:1429)
+	at org.hibernate.tool.schema.spi.SchemaManagementToolCoordinator.process(SchemaManagementToolCoordinator.java:100)
+	at org.hibernate.boot.internal.SessionFactoryObserverForSchemaExport.sessionFactoryCreated(SessionFactoryObserverForSchemaExport.java:35)
+	at org.hibernate.internal.SessionFactoryObserverChain.sessionFactoryCreated(SessionFactoryObserverChain.java:33)
+	at org.hibernate.internal.SessionFactoryImpl.<init>(SessionFactoryImpl.java:327)
+	at org.hibernate.internal.SessionFactoryRegistry.instantiateSessionFactory(SessionFactoryRegistry.java:64)
+	at org.hibernate.boot.internal.SessionFactoryBuilderImpl.build(SessionFactoryBuilderImpl.java:458)
+	at org.hibernate.jpa.boot.internal.EntityManagerFactoryBuilderImpl.build(EntityManagerFactoryBuilderImpl.java:1452)
+	at org.springframework.orm.jpa.vendor.SpringHibernateJpaPersistenceProvider.createContainerEntityManagerFactory(SpringHibernateJpaPersistenceProvider.java:93)
+	at org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean.createNativeEntityManagerFactory(LocalContainerEntityManagerFactoryBean.java:443)
+	at org.springframework.orm.jpa.AbstractEntityManagerFactoryBean.buildNativeEntityManagerFactory(AbstractEntityManagerFactoryBean.java:436)
+	... 22 common frames omitted

@@ -7,11 +7,15 @@ import com.thewizecompany.billnova.dto.UpdateInvoiceRequest;
 import com.thewizecompany.billnova.responses.ApiResponse;
 import com.thewizecompany.billnova.responses.PageResponse;
 import com.thewizecompany.billnova.service.InvoiceService;
+import com.thewizecompany.billnova.service.PdfGenerationService;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.domain.Sort;
+import org.springframework.http.ContentDisposition;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.service.annotation.PutExchange;
@@ -23,6 +27,7 @@ import java.util.UUID;
 @RequiredArgsConstructor
 public class InvoiceController {
     private final InvoiceService invoiceService;
+    private final PdfGenerationService pdfGenerationService;
 
     @PostMapping
     public ResponseEntity<ApiResponse<InvoiceResponse>> create(
@@ -37,7 +42,7 @@ public class InvoiceController {
 
     @GetMapping("/{id}")
     public ResponseEntity<ApiResponse<InvoiceResponse>> getById(
-            @PathVariable String id
+            @PathVariable UUID id
     ){
         return ResponseEntity.ok(
                 ApiResponse.ok(
@@ -94,15 +99,40 @@ public class InvoiceController {
         );
     }
 
-    @PutExchange("/{id}")
+    @PatchMapping("/{id}/lost")
     public ResponseEntity<ApiResponse<InvoiceResponse>> markLost(
             @PathVariable UUID id
     ){
         return ResponseEntity.ok(
                 ApiResponse.ok(
-                        invoiceService.markLost(), "Invoice Status Updated"
+                        invoiceService.markLost(id), "Invoice Status Updated"
                 )
         );
+    }
+
+    // PDF Generation ----------------------------------------------------------------
+
+    @GetMapping("/{id}/pdf")
+    public ResponseEntity<byte[]> getPdf(
+            @PathVariable UUID id,
+            @RequestParam(required = false) UUID templateId
+    ){
+        byte[] pdf = pdfGenerationService.generateInvoicePdf(id, templateId);
+
+        return buildPdfResponse(pdf, "INV-" + id + ".pdf");
+    }
+
+    private ResponseEntity<byte[]> buildPdfResponse(byte[] pdf, String fileName) {
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_PDF);
+        headers.setContentDisposition(
+                ContentDisposition.attachment()
+                        .filename(fileName)
+                        .build()
+        );
+        headers.setContentLength(pdf.length);
+
+        return ResponseEntity.ok().headers(headers).body(pdf);
     }
 
 

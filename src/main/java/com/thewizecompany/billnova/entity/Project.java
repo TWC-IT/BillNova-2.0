@@ -46,7 +46,7 @@ public class Project extends BaseEntity {
     )
     private String code;
     @Column(
-            name = "project_name",
+            name = "name",
             nullable = false
     )
     private String name;

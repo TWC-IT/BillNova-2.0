@@ -16,18 +16,20 @@ public interface TemplateRepository extends JpaRepository<Template, UUID> {
 
     List<Template> findAllByIsDeletedFalse();
 
-    boolean existsByNameAndIsDeletedFalseAndTemplateNameIgnoreCase(String templateName);
+    boolean existsByIsDeletedFalseAndNameIgnoreCase(String name);
 
+    @Query("""
+        SELECT t.id FROM Template t WHERE t.isDefault = TRUE AND t.isDeleted = FALSE
+        """)
+    Optional<UUID> getDefaultTemplateId();
 
     @Modifying(clearAutomatically = true)
-    @Query(
-            """
-UPDATE templates t
-SET t.isDefault = FALSE
-WHERE t.isDefault = TRUE
-AND t.isDeleted = FALSE
-"""
-    )
+    @Query("""
+        UPDATE Template t
+        SET t.isDefault = FALSE
+        WHERE t.isDefault = TRUE
+        AND t.isDeleted = FALSE
+        """)
     void demoteCurrentDefault();
 
 }

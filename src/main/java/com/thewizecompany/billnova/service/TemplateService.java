@@ -25,7 +25,7 @@ public class TemplateService {
 
     @Transactional
     public TemplateResponse create(CreateTemplateRequest request) {
-        if (templateRepository.existsByNameAndIsDeletedFalseAndTemplateNameIgnoreCase(request.getTemplateName())){
+        if (templateRepository.existsByIsDeletedFalseAndNameIgnoreCase(request.getTemplateName())){
             throw new DuplicateResourceException("Template already exists");
         }
         Template template = Template.builder()
@@ -49,7 +49,7 @@ public class TemplateService {
                 .orElseThrow(() -> new ResourceNotFoundException("Template not found with id: ",  id.toString()));
 
         if(!request.getTemplateName().isBlank()){
-            if (templateRepository.existsByNameAndIsDeletedFalseAndTemplateNameIgnoreCase(request.getTemplateName())){
+            if (templateRepository.existsByIsDeletedFalseAndNameIgnoreCase(request.getTemplateName())){
                 throw new DuplicateResourceException("Template already exists");
             }
             template.setName(request.getTemplateName().trim().toLowerCase(Locale.ROOT));

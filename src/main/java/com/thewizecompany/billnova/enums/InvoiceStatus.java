@@ -2,7 +2,7 @@ package com.thewizecompany.billnova.enums;
 
 public enum InvoiceStatus {
     DRAFT,
-    PENDING,
+    ISSUED,
     PAID,
     LOST,
     PARTIALLY_PAID,

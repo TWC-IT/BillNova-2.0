@@ -1,5 +1,6 @@
 package com.thewizecompany.billnova.dto;
 
+import com.thewizecompany.billnova.enums.InvoiceType;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.NotNull;
@@ -13,10 +14,10 @@ import java.util.UUID;
 @Getter
 @Setter
 public class CreateInvoiceRequest {
-    @NotNull(message = "client id is required")
-    private UUID clientId;
     @NotNull(message = "project id is required")
     private UUID projectId;
+
+    private UUID changeOrderId;
 
     @DecimalMin("0.01")
     private BigDecimal amount;
@@ -25,6 +26,9 @@ public class CreateInvoiceRequest {
 
     @NotNull(message = "Invoice Date is required")
     private LocalDate invoiceDate;
+
+    @NotNull(message = "Invoice type is required")
+    private InvoiceType invoiceType;
 
     private boolean isDraft = false;
 }
