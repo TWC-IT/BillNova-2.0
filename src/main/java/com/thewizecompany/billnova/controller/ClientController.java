@@ -21,7 +21,7 @@ import java.util.UUID;
 @RequestMapping("/api/v2/clients")
 @RequiredArgsConstructor
 public class ClientController {
-    private ClientService clientService;
+    private final ClientService clientService;
 
     @PostMapping
     public ResponseEntity<ApiResponse<ClientResponse>> createClient(
