@@ -4,7 +4,7 @@
 spring:
   dotenv:
     filename:
-      dev.env
+      .env
   datasource:
     url: jdbc:postgresql://localhost:5432/${DB_NAME}
     username: ${DB_USERNAME}

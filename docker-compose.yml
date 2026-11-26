@@ -13,7 +13,7 @@ services:
     image: postgres:16-alpine
     container_name: billnova-postgres
     env_file:
-      - dev.env
+      - .env
     restart: unless-stopped
     environment:
       POSTGRES_DB: ${DB_NAME}

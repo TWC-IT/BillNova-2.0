@@ -24,7 +24,7 @@ import java.util.UUID;
 @Service
 @RequiredArgsConstructor
 public class ClientContactService {
-    private ClientContactRepository clientContactRepository;
+    private final ClientContactRepository clientContactRepository;
 
     @Transactional
     public ClientContactResponse create(CreateClientContactRequest request){

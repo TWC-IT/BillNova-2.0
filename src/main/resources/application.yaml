@@ -1,7 +1,7 @@
 spring:
   dotenv:
     filename:
-      dev.env
+      .env
   application:
     name: Billnova
 
