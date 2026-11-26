@@ -85,7 +85,7 @@ public class ClientService {
 
     @Transactional(readOnly = true)
     public PageResponse<ClientResponse> getAll(Pageable pageable){
-        Page<Clients> page = clientRepository.findAll(pageable);
+        Page<Clients> page = clientRepository.findAllByIsDeletedFalse(pageable);
         return PageResponse.from(
                 page.map(client -> ClientResponse.builder()
                         .id(client.getId())
